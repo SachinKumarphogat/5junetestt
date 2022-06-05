@@ -4,20 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <Script type="text/javascript">
- 
-        var n=parseInt(prompt("Enter Number:"));
-
-        var cube;
-        var cube=(n*n*n)
-        
-        console.log(cube)
-        document.write("Cube of entered number = "+cube);
-
-        </Script>
-        
+    <title>Question 1</title>
 </head>
+        <h1>Question 1: In how many types can we create functions? State the difference between those types by giving examples.
+            </h1>
+            <h3>Answer:-</h3>
+           <p>There are four ways a function can be created in JavaScript. They are as follows:</p>
+
+            <h4>1. A function as a statement</h4>
+            <h4>2. A function as an expression</h4> 
+            <h4>3. A function as an arrow function</h4> 
+            <h4>4. A function created using the Function constructor</h4>
+            
+           <h4>1. A Function as a Statement</h4> 
+           
+            A function statement is hoisted at the top of the execution context. So, it can be invoked before it is created. <br>
+            In a function statement, primitive parameters are passed as a value, and non-primitive parameters such as objects and arrays are passed as a reference. <br>
+            <h5>Example-</h5>
+            function Add(num1,num2){ <br>
+                let sum = num1+ num2; <br>
+                return sum; <br>
+            } <br>
+            
+            let res = Add(7,8); <br>
+            console.log(res); // 15<br>
+            
+            <h4>2. A function as an expression</h4>
+            A function expression can also be created as anonymous without a name<br>
+            A function expression is not hoisted on the top of the execution context<br>
+            <h5>Example-</h5>
+            let add = function a(num1,num2){<br>
+                let sum = num1+ num2; <br>
+                return sum;<br>
+            }<br>
+            
+            let res = add(8,9);<br>
+            console.log(res);// 17<br>
+            
+            
+            <h4>3. A function as an arrow function</h4>
+            The arrow functions were introduced in ECMA 2015 with the main purpose of giving a shorter syntax to a function expression. Besides providing shorter syntax, which increases the readability of the code, it does not have its own value of the this object. The value of this object inside an arrow function is inherited from the enclosing scope.<br>
+            It supports the rest parameters<br>
+            It supports the default parameters<br>
+            It does not have arguments object<br>
+            It does not have its own this object<br>
+            It cannot be used as a constructor<br>
+            <h5>Example-</h5>
+            var add = (num1, num2)=> num1+num2; <br>
+            let res = add(5,2);<br>
+            console.log(res); // 7 
+            
+            
+            <h4>4. A function created using the Function constructor</h4>
+            A function can be dynamically created using the Function constructor, but it suffers from security and performance issues and is not advisable to use.<br>
+            <h5>Example-</h5>
+            var add = Function('num1','num2','return num1+num2');<br>
+            let res = add (7,8);<br>
+            console.log(res); // 15</p> 
 <body>
     
 </body>
